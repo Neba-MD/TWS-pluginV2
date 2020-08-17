@@ -1279,7 +1279,7 @@ public class InGameCommands {
             }
             ArrayList<Action> acts = Administration.undo.get(doc.getUuid());
             if(acts == null || acts.isEmpty()){
-                sendErrMessage(player, "revert-no-actions");
+                sendErrMessage(player, "revert-no-actions", doc.getName());
                 return;
             }
             int max = Integer.parseInt(args[1]);
